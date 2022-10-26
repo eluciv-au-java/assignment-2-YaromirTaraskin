@@ -1,0 +1,5 @@
+[
+  { "type": "rotate", "alpha": 90},
+  { "type": "translate", "dx": 5.5, "dy": -3.5},
+  { "type": "scale", "kx": 1, "ky": -1}
+]
