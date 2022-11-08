@@ -1,7 +1,7 @@
 package edu.au.javacourse.transformation;
 
 public class AffineTransformation implements Transformation{
-    private Matrix matrix;
+    protected Matrix matrix;
 
     public AffineTransformation(){
         this.matrix = new Matrix(new double[3][3]);
