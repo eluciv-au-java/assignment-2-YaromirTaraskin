@@ -4,12 +4,12 @@ public class Point {
     private double x;
     private double y;
 
-    public Point(double x, double y){
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    public Point(Matrix vector){
+    public Point(Matrix vector) {
         this.x = vector.getValue(0, 0);
         this.y = vector.getValue(0, 1);
     }
@@ -22,7 +22,7 @@ public class Point {
         return y;
     }
 
-    public Matrix asVector(){
+    public Matrix asVector() {
         double[][] protoMatrix = {{this.getX(), this.getY(), 1}};
         return new Matrix(protoMatrix);
     }

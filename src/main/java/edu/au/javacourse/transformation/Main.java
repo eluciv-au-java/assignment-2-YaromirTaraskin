@@ -102,10 +102,10 @@ public class Main {
 		Point transformedPoint = generalTransformation.apply(point);
 		// применяем трансформацию к созданной точке
 
-		double result_x = transformedPoint.getX();
-		double result_y = transformedPoint.getY();
-		System.out.println(String.format("(%f, %f)", result_x, result_y));
-		// Выводим результат на печать в формате (result_x, result_y). Например: (2.5, -3.998)
+		double resultX = transformedPoint.getX();
+		double resultY = transformedPoint.getY();
+		System.out.println(String.format("(%f, %f)", resultX, resultY));
+		// Выводим результат на печать в формате (resultX, resultY). Например: (2.5, -3.998)
 	}
 
 }

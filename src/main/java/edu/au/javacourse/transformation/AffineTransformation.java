@@ -1,13 +1,13 @@
 package edu.au.javacourse.transformation;
 
-public class AffineTransformation implements Transformation{
+public class AffineTransformation implements Transformation {
     protected Matrix matrix;
 
-    public AffineTransformation(){
+    public AffineTransformation() {
         this.matrix = new Matrix(new double[3][3]);
     }
 
-    public AffineTransformation(Matrix matrix){
+    public AffineTransformation(Matrix matrix) {
         this.matrix = matrix;
     }
 
@@ -17,7 +17,7 @@ public class AffineTransformation implements Transformation{
         return new Point(newPointVector);
     }
 
-    AffineTransformation thenDo(AffineTransformation next){
+    AffineTransformation thenDo(AffineTransformation next) {
         Matrix newTransformationMatrix = this.matrix.multiply(next.matrix);
         return new AffineTransformation(newTransformationMatrix);
     }

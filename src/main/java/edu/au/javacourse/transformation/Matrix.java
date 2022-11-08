@@ -3,19 +3,19 @@ package edu.au.javacourse.transformation;
 
 public class Matrix {
     private double[][] data;
-    public Matrix(double[][] data){
+    public Matrix(double[][] data) {
         this.data = data;
     }
-    double getValue(int row, int column){
+    double getValue(int row, int column) {
         return this.data[row][column];
     }
-    int rowsCount(){
+    int rowsCount() {
         return data.length;
     }
-    int columnsCount(){
+    int columnsCount() {
         return data[0].length;
     }
-    public Matrix multiply(Matrix other){
+    public Matrix multiply(Matrix other) {
         int rowsInResult = this.rowsCount();
         int columnsInResult = other.columnsCount();
         int lengthToBeEaten = this.columnsCount();
@@ -26,7 +26,7 @@ public class Matrix {
                 double currentSum = .0;
 
                 for (int k = 0; k < lengthToBeEaten; k++) {
-                    currentSum += this.getValue(i,k) * other.getValue(k, j);
+                    currentSum += this.getValue(i, k) * other.getValue(k, j);
                 }
 
                 protoResult[i][j] = currentSum;
