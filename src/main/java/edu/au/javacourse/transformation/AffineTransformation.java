@@ -14,7 +14,7 @@ public class AffineTransformation implements Transformation{
     @Override
     public Point apply(Point p) {
         Matrix newPointVector = p.asVector().multiply(this.matrix);
-        return null;
+        return new Point(newPointVector);
     }
 
     AffineTransformation thenDo(AffineTransformation next){
