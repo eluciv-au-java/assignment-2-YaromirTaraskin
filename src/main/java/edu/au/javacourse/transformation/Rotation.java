@@ -2,7 +2,7 @@ package edu.au.javacourse.transformation;
 
 
 public class Rotation extends AffineTransformation {
-    private static Matrix createRotationMatrix(double alpha){
+    private static Matrix createRotationMatrix(double alpha) {
         double[][] rotationProtoMatrix = {
                 {Math.cos(alpha), Math.sin(alpha), 0},
                 {-Math.sin(alpha), Math.cos(alpha), 0},
