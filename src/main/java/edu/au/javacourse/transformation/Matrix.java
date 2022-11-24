@@ -6,13 +6,13 @@ public class Matrix {
     public Matrix(double[][] data) {
         this.data = data;
     }
-    double getValue(int row, int column) {
+    public double getValue(int row, int column) {
         return this.data[row][column];
     }
-    int rowsCount() {
+    private int rowsCount() {
         return data.length;
     }
-    int columnsCount() {
+    private int columnsCount() {
         return data[0].length;
     }
     public Matrix multiply(Matrix other) {

@@ -51,14 +51,8 @@ public class Main {
 		/*
 		 1) Создаем общую трансформацию: new AffineTransformation()
 		 */
-		double[][] protoGeneralTransformationMatrix = new double[3][3];
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
-				protoGeneralTransformationMatrix[i][j] = ((i == j) ? 1 : 0);
-			}
-		}
-		Matrix protoGeneralTransformation = new Matrix(protoGeneralTransformationMatrix);
-		AffineTransformation generalTransformation = new AffineTransformation(protoGeneralTransformation);
+
+		AffineTransformation generalTransformation = new AffineTransformation();
 
 		/*
 		 2) Итерируем по трансформациям, прочитанным из файла.
